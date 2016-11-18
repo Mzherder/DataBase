@@ -13,7 +13,7 @@ namespace Sports.UI
         {
             using (Context context = new Context())
             {
-                List<Team> list = context.Teams.ToList();
+                List<Team> list = context.Teams.Where(t => t.Name.StartsWith("M")).ToList();
             }
         }
     }
