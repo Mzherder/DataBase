@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sports.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,10 @@ namespace Sports.UI
     {
         static void Main(string[] args)
         {
+            using (Context context = new Context())
+            {
+                List<Team> list = context.Teams.ToList();
+            }
         }
     }
 }
